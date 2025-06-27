@@ -16,7 +16,7 @@ CONFIG_SCHEMA = cv.Schema(
         cv.Required(CONF_PIN_A): pins.internal_gpio_input_pin_schema,
         cv.Required(CONF_PIN_B): pins.internal_gpio_output_pin_schema,
     }
-).extend(cv.polling_component_schema("60s"))
+).extend(cv.polling_component_schema("15s"))
 
 
 async def to_code(config):
